@@ -1,17 +1,430 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Минималистичный лендинг | Pure.css</title> 
-<!-- Bulma --> 
-<link rel="stylesheet" 
-href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"> 
-<!-- Подключаем иконки Font Awesome, пригодятся в реализации --> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font
-awesome/6.7.2/css/all.min.css">
+
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ЗдоровоЕда — доставка здорового питания</title>
+
+  <!-- Bulma v0.9.4 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+
+  <!-- Font Awesome 6.7.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Кастомные стили (можно добавить позже) -->
+  <style>
+    .hero.is-healthy {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9f7ef 100%);
+    }
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    .cta-button {
+      font-weight: 600;
+      padding: 1rem 2rem;
+    }
+  </style>
 </head>
-<body> 
-<!-- Контент -->
+
+
+
+<body>
+
+  <!-- ШАПКА -->
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <strong>ЗдоровоЕда</strong>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+           data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#about">О нас</a>
+          <a class="navbar-item" href="#advantages">Преимущества</a>
+          <a class="navbar-item" href="#catalog">Каталог</a>
+          <a class="navbar-item" href="#reviews">Отзывы</a>
+          <a class="navbar-item" href="#contacts">Контакты</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a class="button is-success cta-button" href="#order">
+              Заказать пробный день
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ГЕРОЙ -->
+  <section class="hero is-healthy is-halfheight" id="hero">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 mb-4">
+          Здоровое питание с доставкой на дом
+        </h1>
+        <p class="subtitle is-4 mb-6">
+          Ежедневные рационы от шеф-повара. Без сахара, глютена и консервантов.
+        </p>
+        <div class="buttons is-centered">
+          <a class="button is-large is-success cta-button" href="#order">
+            <span>Заказать пробный день</span>
+            <span class="icon is-small ml-2">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- О НАС -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-6">
+          <h2 class="title is-3 mb-4">Мы — команда диетологов и поваров</h2>
+          <p class="content">
+            Создали сервис, где вы получаете сбалансированные рационы, готовые к употреблению.
+            Каждый день — новый вкус, без компромиссов со здоровьем.
+          </p>
+          <div class="mt-5">
+            <a class="button is-link" href="#catalog">
+              Посмотреть меню
+            </a>
+          </div>
+        </div>
+        <div class="column is-6">
+          <figure class="image is-4by3">
+            <img src="https://placehold.co/600x450/e9f7ef/2d7d5a?text=Свежие+рационы" alt="Упакованный обед">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section class="section bg-light" id="advantages">
+    <div class="container">
+      <div class="has-text-centered mb-6">
+        <h2 class="title is-3">Почему выбирают нас</h2>
+        <hr class="hr is-marginless is-primary" style="max-width: 100px; margin: 1rem auto;">
+      </div>
+
+      <div class="columns is-multiline is-centered">
+        <!-- Карточка 1 -->
+        <div class="column is-12-mobile is-6-tablet is-3-desktop feature-card">
+          <div class="card">
+            <div class="card-content has-text-centered p-5">
+              <span class="icon is-large mb-3">
+                <i class="fas fa-leaf fa-2x has-text-success"></i>
+              </span>
+              <h3 class="title is-5">Свежие ингредиенты</h3>
+              <p class="subtitle is-size-7">
+                Только сезонные продукты из проверенных ферм
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="column is-12-mobile is-6-tablet is-3-desktop feature-card">
+          <div class="card">
+            <div class="card-content has-text-centered p-5">
+              <span class="icon is-large mb-3">
+                <i class="fas fa-user-cog fa-2x has-text-info"></i>
+              </span>
+              <h3 class="title is-5">Персональный план</h3>
+              <p class="subtitle is-size-7">
+                Подбор рациона под ваши цели: похудение, набор массы, спорт
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="column is-12-mobile is-6-tablet is-3-desktop feature-card">
+          <div class="card">
+            <div class="card-content has-text-centered p-5">
+              <span class="icon is-large mb-3">
+                <i class="fas fa-ban fa-2x has-text-danger"></i>
+              </span>
+              <h3 class="title is-5">Без ГМО и консервантов</h3>
+              <p class="subtitle is-size-7">
+                Никаких E-добавок. Только натуральные ингредиенты
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 4 -->
+        <div class="column is-12-mobile is-6-tablet is-3-desktop feature-card">
+          <div class="card">
+            <div class="card-content has-text-centered p-5">
+              <span class="icon is-large mb-3">
+                <i class="fas fa-motorcycle fa-2x has-text-warning"></i>
+              </span>
+              <h3 class="title is-5">Доставка за 30 мин</h3>
+              <p class="subtitle is-size-7">
+                Свежее — значит горячее. Мы доставляем в течение 30 минут
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="has-text-centered mb-6">
+        <h2 class="title is-3">Что говорят наши клиенты</h2>
+        <hr class="hr is-marginless is-primary" style="max-width: 100px; margin: 1rem auto;">
+      </div>
+
+      <div class="columns is-multiline">
+        <div class="column is-12-mobile is-6-tablet">
+          <div class="box">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img class="is-rounded" src="https://placehold.co/48x48/f0f0f0/666?text=А" alt="Анна">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-5">Анна, 32 г.</p>
+                <p class="star-rating">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                </p>
+                <p class="content mt-2">
+                  «Потеряла 5 кг за месяц без диет и голода. Теперь ем вкусно и здорово»
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet">
+          <div class="box">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img class="is-rounded" src="https://placehold.co/48x48/f0f0f0/666?text=Д" alt="Дмитрий">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-5">Дмитрий, 41 г.</p>
+                <p class="star-rating">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                </p>
+                <p class="content mt-2">
+                  «Детям нравится! Даже капусту едят с удовольствием»
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАТАЛОГ -->
+<section class="section" id="catalog">
+  <div class="container">
+    <div class="has-text-centered mb-6">
+      <h2 class="title is-3">Наши рационы</h2>
+      <hr class="hr is-marginless is-primary" style="max-width: 100px; margin: 1rem auto;">
+    </div>
+
+    <!-- Переключатель категорий -->
+    <div class="tabs is-centered mb-5">
+      <ul>
+        <li class="is-active"><a>Для похудения</a></li>
+        <li><a>Для спортсменов</a></li>
+        <li><a>Вегетарианское меню</a></li>
+        <li><a>Детское меню</a></li>
+      </ul>
+    </div>
+
+    <!-- Список товаров (карточки) -->
+    <div class="columns is-multiline is-centered">
+      <!-- Карточка 1 -->
+      <div class="column is-12-mobile is-6-tablet is-4-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://placehold.co/600x450/e9f7ef/2d7d5a?text=Рацион+для+похудения" alt="Рацион для похудения">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">«Лёгкий старт»</p>
+                <p class="subtitle is-6">450 ккал | 5 дней</p>
+              </div>
+            </div>
+            <div class="content mt-3">
+              <p><strong>Калорийность:</strong> 450 ккал</p>
+              <p><strong>Состав:</strong> Овсянка, яйцо, авокадо, семена чиа</p>
+              <p><strong>Цена:</strong> 390 ₽/день</p>
+            </div>
+            <footer class="card-footer mt-4">
+              <a class="button is-fullwidth is-success" href="#">
+                Добавить в корзину
+              </a>
+            </footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 2 -->
+      <div class="column is-12-mobile is-6-tablet is-4-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://placehold.co/600x450/f0f7e9/1a5e3a?text=Рацион+для+спортсменов" alt="Рацион для спортсменов">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">«Энергия дня»</p>
+                <p class="subtitle is-6">2800 ккал | 7 дней</p>
+              </div>
+            </div>
+            <div class="content mt-3">
+              <p><strong>Калорийность:</strong> 2800 ккал</p>
+              <p><strong>Состав:</strong> Говядина, киноа, брокколи, орехи, йогурт</p>
+              <p><strong>Цена:</strong> 650 ₽/день</p>
+            </div>
+            <footer class="card-footer mt-4">
+              <a class="button is-fullwidth is-success" href="#">
+                Добавить в корзину
+              </a>
+            </footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 3 -->
+      <div class="column is-12-mobile is-6-tablet is-4-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://placehold.co/600x450/eef9f2/2a7a5a?text=Вегетарианский+рацион" alt="Вегетарианский рацион">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">«Зелёная сила»</p>
+                <p class="subtitle is-6>1900 ккал | 5 дней</p>
+              </div>
+            </div>
+            <div class="content mt-3">
+              <p><strong>Калорийность:</strong> 1900 ккал</p>
+              <p><strong>Состав:</strong> Чечевица, киноа, шпинат, авокадо, тофу</p>
+              <p><strong>Цена:</strong> 420 ₽/день</p>
+            </div>
+            <footer class="card-footer mt-4">
+              <a class="button is-fullwidth is-success" href="#">
+                Добавить в корзину
+              </a>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4">
+          <p class="title is-4">ЗдоровоЕда</p>
+          <p class="content">
+            Сервис доставки сбалансированных рационов для тех, кто ценит здоровье и время.
+          </p>
+        </div>
+        <div class="column is-4">
+          <p class="heading" id="contacts">Контакты</p>
+          <ul class="content">
+            <li><i class="fas fa-map-marker-alt mr-2"></i> Москва, ул. Здоровая, 10</li>
+            <li><i class="fas fa-phone mr-2"></i> +7 (495) 123-45-67</li>
+            <li><i class="fas fa-envelope mr-2"></i> hello@zdoroveeda.ru</li>
+          </ul>
+        </div>
+        <div class="column is-4">
+          <p class="heading">Соцсети</p>
+          <div class="buttons">
+            <a class="button is-small is-dark" href="#">
+              <span class="icon">
+                <i class="fab fa-instagram"></i>
+              </span>
+            </a>
+            <a class="button is-small is-info" href="#">
+              <span class="icon">
+                <i class="fab fa-telegram"></i>
+              </span>
+            </a>
+            <a class="button is-small is-link" href="#">
+              <span class="icon">
+                <i class="fab fa-vk"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-5">
+      <div class="has-text-centered">
+        <p class="is-size-7">
+          © 2026 ЗдоровоЕда. Все права защищены.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS (не обязателен для Bulma, но для бургера) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
