@@ -30,6 +30,14 @@
       font-weight: 600;
       padding: 1rem 2rem;
     }
+    .equal-height-card .card, .box {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .box{
+      padding: 15px;
+    }
   </style>
 </head>
 
@@ -63,7 +71,7 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <a class="button is-success cta-button" href="#order">
-              Заказать пробный день
+              Перейти в корзину
             </a>
           </div>
         </div>
@@ -71,7 +79,7 @@
     </div>
   </nav>
 
-  <!-- ГЕРОЙ -->
+  <!-- ГЛАВНОЕ -->
   <section class="hero is-healthy is-halfheight" id="hero">
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -128,7 +136,7 @@
 
       <div class="columns is-multiline is-centered">
         <!-- Карточка 1 -->
-        <div class="column is-12-mobile is-6-tablet is-3-desktop feature-card">
+        <div class="column is-12-mobile is-6-tablet is-3-desktop feature-card equal-height-card">
           <div class="card">
             <div class="card-content has-text-centered p-5">
               <span class="icon is-large mb-3">
@@ -143,7 +151,7 @@
         </div>
 
         <!-- Карточка 2 -->
-        <div class="column is-12-mobile is-6-tablet is-3-desktop feature-card">
+        <div class="column is-12-mobile is-6-tablet is-3-desktop feature-card equal-height-card">
           <div class="card">
             <div class="card-content has-text-centered p-5">
               <span class="icon is-large mb-3">
@@ -158,7 +166,7 @@
         </div>
 
         <!-- Карточка 3 -->
-        <div class="column is-12-mobile is-6-tablet is-3-desktop feature-card">
+        <div class="column is-12-mobile is-6-tablet is-3-desktop feature-card equal-height-card">
           <div class="card">
             <div class="card-content has-text-centered p-5">
               <span class="icon is-large mb-3">
@@ -173,7 +181,7 @@
         </div>
 
         <!-- Карточка 4 -->
-        <div class="column is-12-mobile is-6-tablet is-3-desktop feature-card">
+        <div class="column is-12-mobile is-6-tablet is-3-desktop feature-card equal-height-card">
           <div class="card">
             <div class="card-content has-text-centered p-5">
               <span class="icon is-large mb-3">
@@ -199,7 +207,7 @@
       </div>
 
       <div class="columns is-multiline">
-        <div class="column is-12-mobile is-6-tablet">
+        <div class="column is-12-mobile is-6-tablet equal-height-card">
           <div class="box">
             <div class="media">
               <div class="media-left">
@@ -224,7 +232,7 @@
           </div>
         </div>
 
-        <div class="column is-12-mobile is-6-tablet">
+        <div class="column is-12-mobile is-6-tablet equal-height-card">
           <div class="box">
             <div class="media">
               <div class="media-left">
@@ -342,7 +350,7 @@
             <div class="media">
               <div class="media-content">
                 <p class="title is-4">«Зелёная сила»</p>
-                <p class="subtitle is-6>1900 ккал | 5 дней</p>
+                <p class="subtitle is-6">1900 ккал | 5 дней</p>
               </div>
             </div>
             <div class="content mt-3">
@@ -410,7 +418,7 @@
     </div>
   </footer>
 
-  <!-- JS (не обязателен для Bulma, но для бургера) -->
+  <!-- JS (для бургера) -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -426,5 +434,6 @@
       }
     });
   </script>
+
 </body>
 </html>
