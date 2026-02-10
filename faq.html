@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,72 +8,134 @@
   <!-- Bulma v0.9.4 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
-  <!-- Font Awesome 6.7.2 -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+  
   <!-- Кастомные стили  -->
   <style>
-    .hero.is-healthy {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9f7ef 100%);
+    summary {
+      list-style: none;
     }
-    .feature-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    summary::-webkit-details-marker,
+    summary::marker {
+      display: none;
     }
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+
+    .faq-summary::after {
+      content: "\f078";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      float: right;
+      color: #4a4a4a;
+      transition: transform 0.2s;
     }
-    .cta-button {
-      font-weight: 600;
-      padding: 1rem 2rem;
-    }
-    .equal-height-card .card, .box {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .box{
-      padding: 15px;
+    details[open] .faq-summary::after {
+      content: "\f077";
+      transform: rotate(180deg);
     }
   </style>
 </head>
 
-
-
 <body>
 
-   <section class="container py-5">
-  <h2 class="text-center mb-5">Часто задаваемые вопросы</h2>
-  <div class="accordion" id="faqAccordion">
-    <div class="accordion-item">
-      <h3 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-          Как начать пользоваться сервисом?
-        </button>
-      </h3>
-      <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Зарегистрируйтесь на сайте, подтвердите email и начните пользоваться бесплатным тарифом. Все функции доступны сразу после регистрации.
+  <header>
+  <nav class="navbar is-transparent" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <strong>ЗдоровоЕда</strong>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+           data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#about">О&nbsp;нас</a>
+          <a class="navbar-item" href="index.html">Главная</a>
+          <a class="navbar-item" href="#advantages">Преимущества</a>
+          <a class="navbar-item" href="#catalog">Каталог</a>
+          <a class="navbar-item" href="#reviews">Отзывы</a>
+          <a class="navbar-item is-active" href="faq.html">FAQ</a>
+          <a class="navbar-item" href="contacts.html">Контакты</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a class="button is-success cta-button" href="#order">
+              Перейти в&nbsp;корзину
+            </a>
+          </div>
         </div>
       </div>
     </div>
+  </nav>
+  </header>
 
-    <div class="accordion-item">
-      <h3 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-          Есть ли мобильное приложение?
-        </button>
-      </h3>
-      <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Да, наше приложение доступно в App Store и Google Play. Все функции синхронизируются между веб-версией и приложением.
-        </div>
-      </div>
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered mb-5">Часто задаваемые вопросы</h2>
+
+    <div class="box">
+      <details>
+        <summary class="faq-summary subtitle is-6 mb-2">Как начать пользоваться сервисом?</summary>
+        <p>Зарегистрируйтесь на сайте, подтвердите email и начните пользоваться бесплатным тарифом. Все функции доступны сразу после регистрации.</p>
+      </details>
     </div>
 
-    <!-- Добавьте ещё 3–5 вопросов по аналогии -->
+    <div class="box mt-4">
+      <details>
+        <summary class="faq-summary subtitle is-6 mb-2">Есть ли мобильное приложение?</summary>
+        <p>Да, наше приложение доступно в App Store и Google Play. Все функции синхронизируются между веб-версией и приложением.</p>
+      </details>
+    </div>
+
+    <div class="box mt-4">
+      <details>
+        <summary class="faq-summary subtitle is-6 mb-2">Можно ли изменить заказ после оформления?</summary>
+        <p>Да, вы можете внести изменения до 18:00 предыдущего дня доставки через личный кабинет.</p>
+      </details>
+    </div>
+
+    <div class="box mt-4">
+      <details>
+        <summary class="faq-summary subtitle is-6 mb-2">Какие способы оплаты доступны?</summary>
+        <p>Мы принимаем оплату банковскими картами (Visa, Mastercard), Apple Pay, Google Pay и через СБП.</p>
+      </details>
+    </div>
+
+    <div class="box mt-4">
+      <details>
+        <summary class="faq-summary subtitle is-6 mb-2">Доставляете ли вы за пределы города?</summary>
+        <p>Пока доставка доступна только в пределах МКАД. Расширение зоны планируется в этом году.</p>
+      </details>
+    </div>
+
   </div>
 </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4">
+          <p class="title is-4">ЗдоровоЕда</p>
+          <p class="content">
+            Сервис доставки сбалансированных рационов для тех, кто ценит здоровье и&nbsp;время.
+          </p>
+        </div>
+
+      </div>
+      <hr class="my-5">
+      <div class="has-text-centered">
+        <p class="is-size-7">
+          © 2026 ЗдоровоЕда. Все права защищены.
+        </p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
