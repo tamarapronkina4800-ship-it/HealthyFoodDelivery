@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЗдоровоЕда&nbsp;&mdash; доставка здорового питания</title>
+
+  <!-- Bulma v0.9.4 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+  <!-- Font Awesome 6.7.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- Кастомные стили  -->
+  <style>
+    .hero.is-healthy {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9f7ef 100%);
+    }
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    .cta-button {
+      font-weight: 600;
+      padding: 1rem 2rem;
+    }
+    .equal-height-card .card, .box {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .box{
+      padding: 15px;
+    }
+  </style>
+</head>
+
+
+
+<body>
+
+   <section class="container py-5">
+  <h2 class="text-center mb-5">Часто задаваемые вопросы</h2>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h3 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+          Как начать пользоваться сервисом?
+        </button>
+      </h3>
+      <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Зарегистрируйтесь на сайте, подтвердите email и начните пользоваться бесплатным тарифом. Все функции доступны сразу после регистрации.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h3 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+          Есть ли мобильное приложение?
+        </button>
+      </h3>
+      <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Да, наше приложение доступно в App Store и Google Play. Все функции синхронизируются между веб-версией и приложением.
+        </div>
+      </div>
+    </div>
+
+    <!-- Добавьте ещё 3–5 вопросов по аналогии -->
+  </div>
+</section>
+
+</body>
+</html>
