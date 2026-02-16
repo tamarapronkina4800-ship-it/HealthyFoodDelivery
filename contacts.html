@@ -89,24 +89,24 @@
       <div class="column is-6">
         <form id="feedbackForm">
           <div class="field">
-            <label class="label">Имя</label>
+            <label class="label">Имя<span class="has-text-danger">*</span></label>
             <div class="control">
-              <input class="input" type="text" placeholder="Ваше имя" required>
+              <input class="input" type="text" id="fullname" placeholder="Ваше имя" required>
             </div>
           </div>
 
           <div class="field">
-            <label class="label">Email</label>
+            <label class="label">Email<span class="has-text-danger">*</span></label>
             <div class="control">
-              <input class="input" type="email" placeholder="example@email.com" required>
+              <input class="input" type="email" id="email" placeholder="example@email.com" required>
             </div>
           </div>
 
           <div class="field">
-            <label class="label">Тема</label>
+            <label class="label">Тема<span class="has-text-danger">*</span></label>
             <div class="control">
               <div class="select is-fullwidth">
-                <select required>
+                <select id="topic" required>
                   <option value="" disabled selected>Выберите тему</option>
                   <option>Предложение</option>
                   <option>Жалоба</option>
@@ -118,16 +118,16 @@
           </div>
 
           <div class="field">
-            <label class="label">Сообщение</label>
+            <label class="label">Сообщение<span class="has-text-danger">*</span></label>
             <div class="control">
-              <textarea class="textarea" placeholder="Ваше сообщение..." rows="5" required></textarea>
+              <textarea class="textarea" id="message" placeholder="Ваше сообщение..." rows="5" required></textarea>
             </div>
           </div>
 
           <div class="field">
             <div class="control">
               <label class="checkbox">
-                <input type="checkbox" required>
+                <input type="checkbox" id="agreement" required>
                 Соглашаюсь на обработку персональных данных
               </label>
             </div>
@@ -141,35 +141,34 @@
         </form>
       </div>
 
-
+      <div class="column is-4">
+        <p class="heading" id="contacts">Контакты</p>
+        <ul class="content">
+          <li><i class="fas fa-map-marker-alt mr-2"></i> Москва, ул. Здоровая, 10</li>
+          <li><i class="fas fa-phone mr-2"></i> +7 (495) 123-45-67</li>
+          <li><i class="fas fa-envelope mr-2"></i> hello@zdoroveeda.ru</li>
+        </ul>
+      </div>
 
       <div class="column is-4">
-          <p class="heading" id="contacts">Контакты</p>
-          <ul class="content">
-            <li><i class="fas fa-map-marker-alt mr-2"></i> Москва, ул. Здоровая, 10</li>
-            <li><i class="fas fa-phone mr-2"></i> +7 (495) 123-45-67</li>
-            <li><i class="fas fa-envelope mr-2"></i> hello@zdoroveeda.ru</li>
-          </ul>
+        <p class="heading">Соцсети</p>
+        <div class="buttons">
+          <a class="button is-small is-dark" href="#">
+            <span class="icon">
+              <i class="fab fa-instagram"></i>
+            </span>
+          </a>
+          <a class="button is-small is-info" href="#">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+          </a>
+          <a class="button is-small is-link" href="#">
+            <span class="icon">
+              <i class="fab fa-vk"></i>
+            </span>
+          </a>
         </div>
-        <div class="column is-4">
-          <p class="heading">Соцсети</p>
-          <div class="buttons">
-            <a class="button is-small is-dark" href="#">
-              <span class="icon">
-                <i class="fab fa-instagram"></i>
-              </span>
-            </a>
-            <a class="button is-small is-info" href="#">
-              <span class="icon">
-                <i class="fab fa-telegram"></i>
-              </span>
-            </a>
-            <a class="button is-small is-link" href="#">
-              <span class="icon">
-                <i class="fab fa-vk"></i>
-              </span>
-            </a>
-          </div>
       </div>
     </div>
   </div>
@@ -194,6 +193,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="scripts/validation.js"></script>
+  <script src="scripts/consoleLogger.js"></script>
 
 </body>
 </html>
